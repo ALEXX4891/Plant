@@ -1,0 +1,42 @@
+:root {
+  --color-green: #0f6f2e;
+  --color-light-green: #4caf50;
+  --color-grey: #787878;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-636363: #636363;
+  --color-5C5C5C: #5c5c5c;
+  --color-0F6F2E: #0f6f2e;
+  --color-FF9900: #ff9900;
+  --color-282828: #282828;
+}
+
+/* #region MEDIA */
+
+@media (max-width: 1919.6px) {
+}
+
+@media (max-width: 1460px) {
+}
+
+@media (max-width: 1168px) {
+}
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 680px) {
+}
+
+@media (max-width: 376px) {
+}
+
+@media (max-width: 350px) {
+}
+
+@media (max-width: 280px) {
+}
+
