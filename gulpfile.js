@@ -25,3 +25,9 @@ const dev = gulp.series(reset, copy, watcher);
 
 // выполнение задач по умолчанию
 gulp.task('default', dev);
+
+// импортируем плагины
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+
+const sass = require('gulp-sass')(require('sass'));
