@@ -10,7 +10,7 @@ export const path = { // объект с путями к файлам и пап�
     files: `${buildFolder}/files/`,
     // js: `${buildFolder}/js/`,
     // css: `${buildFolder}/css/`,
-    // html: `${buildFolder}/`,
+    html: `${buildFolder}/`,
     // images: `${buildFolder}/img/`,
     // fonts: `${buildFolder}/fonts/`,
     // svgicons: `${srcFolder}/svgicons/`,
@@ -21,13 +21,13 @@ export const path = { // объект с путями к файлам и пап�
     // images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     // svg: `${srcFolder}/img/**/*.svg`,
     // scss: `${srcFolder}/scss/style.scss`,
-    // html: `${srcFolder}/*.html`,
+    html: `${srcFolder}/*.html`,
     // svgicons: `${srcFolder}/svgicons/*.svg`,
   },
   watch: {
     // js: `${srcFolder}/js/**/*.js`, //следить за JS файлами в папке js
     // scss: `${srcFolder}/scss/**/*.scss`, //следить за SCSS файлами в папке scss
-    // html: `${srcFolder}/**/*.html`, //следить за HTML файлами в папке src
+    html: `${srcFolder}/**/*.html`, //следить за HTML файлами в папке src
     // images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`, //следить за изображениями
     files: `${srcFolder}/files/**/*.*`, //следить за файлами
   },
