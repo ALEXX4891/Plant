@@ -2,6 +2,7 @@ import dartSass from "sass"; // импортируем библиотеку sass
 import gulpSass from "gulp-sass"; // импортируем gulp-sass //npm i gulp-sass -D
 import rename from "gulp-rename"; // импортируем плагин gulp-rename //npm i gulp-rename -D
 
+import map from "gulp-sourcemaps"; // npm i gulp-sourcemaps -D
 import cleanCss from "gulp-clean-css"; // Сжатие css //npm i gulp-clean-css -D
 import webpcss from "gulp-webpcss"; // вывод изображений в формат webp //npm i gulp-webpcss -D
 import autoprefixer from "gulp-autoprefixer"; // добавление вендорных префиксов //npm i gulp-autoprefixer -D
@@ -12,6 +13,7 @@ const sass = gulpSass(dartSass); // вызываем плагин gulp-sass и �
 export const scss = () => {
   return app.gulp
     .src(app.path.src.scss, { sourcemaps: true })
+    .pipe(map.init())
     .pipe(
       app.plugins.plumber(
         app.plugins.notify.onError({
@@ -24,7 +26,9 @@ export const scss = () => {
     .pipe(
       sass({
         outputStyle: "expanded",
+        includePaths: import('node-normalize-scss').includePaths
       })
+      .on('error', sass.logError)
     )
     .pipe(groupCssMediaQueries())
     .pipe(
@@ -33,20 +37,21 @@ export const scss = () => {
         noWebpClass: ".no-webp", // добавит класс если не будет поддержки webp
       })
     )
-    .pipe(
-      autoprefixer({
-        grid: true, // поддержка css grid
-        overrideBrowserslist: ["last 3 versions"], //добавляет вендорные префиксы для последних 3 версий браузеров
-        cascade: true,
-      })
-    )
+    .pipe(map.write('.'))
+    // .pipe(
+    //   autoprefixer({
+    //     grid: true, // поддержка css grid
+    //     overrideBrowserslist: ["last 3 versions"], //добавляет вендорные префиксы для последних 3 версий браузеров
+    //     cascade: true,
+    //   })
+    // )
     .pipe(app.gulp.dest(app.path.build.css)) // выгружаем НЕминифицированный css
-    .pipe(cleanCss())
-    .pipe(
-      rename({
-        extname: ".min.css",
-      })
-    )
-    .pipe(app.gulp.dest(app.path.build.css)) // выгружаем минифицированный css
-    .pipe(app.plugins.browserSync.stream());
+    // .pipe(cleanCss())
+    // .pipe(
+    //   rename({
+    //     extname: ".min.css",
+    //   })
+    // )
+    // .pipe(app.gulp.dest(app.path.build.css)) // выгружаем минифицированный css
+    // .pipe(app.plugins.browserSync.stream());
 };
