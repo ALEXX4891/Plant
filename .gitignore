@@ -5,6 +5,7 @@
 *.log*
 node_modules/
 dist/
+gulp/version.json
 
 # Папка с собранными файлами проекта
 # build/
