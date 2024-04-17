@@ -526,6 +526,13 @@ img {
   top: 0px;
   width: 12px;
   right: 0px;
+  bottom: 0px;
+  background-color: $color-gray;
+  border-radius: 100px;
+}
+
+.simplebar-scrollbar.simplebar-visible {
+  // height: 85px !important;
 }
 
 .simplebar-scrollbar.simplebar-visible:before {
@@ -538,6 +545,14 @@ img {
   width: 100%;
   border-collapse: collapse;
 
+  &__body {
+    .table__small-btn {
+      svg {
+        cursor: pointer;
+      }
+    }
+  }
+
   th {
     font-weight: 700;
   }
@@ -547,7 +562,7 @@ img {
   }
 
   &__column {
-    line-height: 123%;
+    line-height: 120%;
     border-bottom: 1px solid rgb(210, 210, 210);
     text-align: start;
     padding: 5px 8px;
