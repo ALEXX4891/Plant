@@ -12,7 +12,7 @@ const sass = gulpSass(dartSass); // вызываем плагин gulp-sass и �
 
 export const scss = () => {
   return app.gulp
-    .src(app.path.src.scss)
+    .src(app.path.src.scss, { sourcemaps: app.isDev })
     .pipe(app.plugins.plumber(
         app.plugins.notify.onError({
           title: "SCSS",
@@ -20,34 +20,49 @@ export const scss = () => {
         })
       )
     )
-    .pipe(map.init())
+    .pipe(app.plugins.if(
+      app.isDev,
+      map.init()
+    ))
     .pipe(app.plugins.replace(/@img\//g, "../img/"))
     .pipe(sass({
-        outputStyle: "expanded",
-        // includePaths: import('node-normalize-scss').includePaths
+        outputStyle: "expanded"
       }).on("error", sass.logError)
     )
-    .pipe(map.write("."))
-    // .pipe(app.gulp.dest(app.path.build.css)) // выгружаем НЕминифицированный css
-    // .pipe(groupCssMediaQueries())
-    // .pipe(webpcss({
-    //     webpClass: ".webp", //добавит класс если будет поддержка webp
-    //     noWebpClass: ".no-webp", // добавит класс если не будет поддержки webp
-    //   })
-    // )
-    // .pipe(autoprefixer({
-    //     grid: true, // поддержка css grid
-    //     overrideBrowserslist: ["last 3 versions"], //добавляет вендорные префиксы для последних 3 версий браузеров
-    //     cascade: true,
-    //   })
-    // )
-    .pipe(app.gulp.dest(app.path.build.css)); // выгружаем НЕминифицированный css
-  // .pipe(cleanCss())
-  // .pipe(
-  //   rename({
-  //     extname: ".min.css",
-  //   })
-  // )
+    .pipe(app.plugins.if(
+      app.isDev,
+      map.write(".")
+    ))
+    .pipe(app.gulp.dest(app.path.build.css)) // выгружаем НЕминифицированный css
+    .pipe(app.plugins.if(
+      app.isBuild,
+      groupCssMediaQueries()
+    ))
+    .pipe(app.plugins.if(
+      app.isBuild,
+      autoprefixer({
+        grid: true, // поддержка css grid
+        overrideBrowserslist: ["last 3 versions"], //добавляет вендорные префиксы для последних 3 версий браузеров
+        cascade: true,
+      })
+    ))
+    .pipe(app.plugins.if(
+      app.isBuild,
+      webpcss({
+        webpClass: ".webp", //добавит класс если будет поддержка webp
+        noWebpClass: ".no-webp", // добавит класс если не будет поддержки webp
+      })
+    ))
+    .pipe(app.gulp.dest(app.path.build.css)) // выгружаем НЕминифицированный css
+    .pipe(app.plugins.if(
+      app.isBuild,
+      cleanCss()
+    ))
+  .pipe(
+    rename({
+      extname: ".min.css",
+    })
+  )
   // .pipe(app.gulp.dest(app.path.build.css)) // выгружаем минифицированный css
   // .pipe(app.plugins.browserSync.stream());
 };

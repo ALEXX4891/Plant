@@ -12,21 +12,27 @@ export const html = () => {
     ))
     .pipe(fileinclude()) // подключаем файлы внутри html
     .pipe(app.plugins.replace(/@img\//g, 'img/')) // заменяем пути к изображениям
-    .pipe(webpHtmlNosvg())
-    .pipe(versionNumber({
-      'value': '%DT%',
-      'append': {
-        'key': '_v',
-        'cover': 0,
-        'to': [
-          'css',
-          'js',
-        ]
-      },
-      'output': {
-        'file': 'gulp/version.json'
-      }
-    }))
+    .pipe(app.plugins.if(
+      app.isBuild,
+      webpHtmlNosvg()
+    ))
+    .pipe(app.plugins.if(
+      app.isBuild,
+      versionNumber({
+        'value': '%DT%',
+        'append': {
+          'key': '_v',
+          'cover': 0,
+          'to': [
+            'css',
+            'js',
+          ]
+        },
+        'output': {
+          'file': 'gulp/version.json'
+        }
+      })
+    )) 
     .pipe(app.gulp.dest(app.path.build.html)) // путь куда скопируем файлы
     // .pipe(app.plugins.browserSync.stream()); // обновляем браузер
 }

@@ -5,6 +5,8 @@ import { plugins } from './gulp/config/plagins.js'; //импортируем п�
 
 //передаем значения в глобальную переменную
 global.app = {
+  isBuild: process.argv.includes('--build'),
+  isDev: !process.argv.includes('--build'),
   path: path,
   gulp: gulp,
   plugins: plugins
@@ -44,6 +46,10 @@ const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, css, js, js
 // построение сценариев выполнения задач
 // const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher));
+const build = gulp.series(reset, mainTasks);
+
+// экспорт сценариев
+export { dev, build };
 
 
 // выполнение задач по умолчанию
