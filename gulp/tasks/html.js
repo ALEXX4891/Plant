@@ -28,5 +28,5 @@ export const html = () => {
       }
     }))
     .pipe(app.gulp.dest(app.path.build.html)) // путь куда скопируем файлы
-    .pipe(app.plugins.browserSync.stream()); // обновляем браузер
+    // .pipe(app.plugins.browserSync.stream()); // обновляем браузер
 }

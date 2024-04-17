@@ -244,11 +244,11 @@ img {
   background-color: $color-F0F7FF;
   box-shadow: inset 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
   &__container {
-    padding: 30px;
+    padding: 30px 20px 30px 30px;
     background-color: $color-7DCBE4;
   }
   &__toggle {
-    margin-right: 18.5px;
+    margin-right: 25.5px;
   }
   &__title {
     color: $color-black;
@@ -491,9 +491,48 @@ img {
 }
 
 .table-body-wrapper {
-  height: calc(100vh - 329px);
-  overflow-y: auto;
+  height: calc(100vh - 360px);
+  overflow: auto;
+  margin-bottom: 30px;
+  padding-right: 30px;
 }
+
+.table-head-wrapper {
+  padding-right: 30px;
+}
+
+//скролл scroll:
+
+.simplebar-content-wrapper {
+  overflow: auto;
+}
+
+.scrol__container {
+  width: 399px;
+  height: 310px;
+  font-size: 14px;
+  line-height: 170%;
+}
+
+.simplebar-scrollbar:before {
+  border-radius: 100px;
+  background: $color-890000;
+}
+
+.simplebar-track.simplebar-vertical {
+  // position: absolute;
+  // top: 0;
+  // left: 10px;
+  top: 0px;
+  width: 12px;
+  right: 0px;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1;
+}
+
+// end скролл scroll
 
 .table {
   width: 100%;
@@ -508,28 +547,29 @@ img {
   }
 
   &__column {
-    line-height: 162%;
+    line-height: 123%;
     border-bottom: 1px solid rgb(210, 210, 210);
     text-align: start;
-    padding: 0 8px;
+    padding: 5px 8px;
 
     &_4 {
       width: 4%;
     }
     &_26 {
-      width: 26%;
+      width: 24%;
     }
     &_11 {
       width: 11%;
     }
     &_28 {
-      width: 29%;
+      width: 27.5%;
     }
     &_14 {
-      width: 13.5%;
+      width: 13%;
     }
     &_2 {
-      width: 3.5%;
+      text-align: end;
+      width: 2%;
     }
   }
 
@@ -575,34 +615,28 @@ img {
   margin: 0 auto;
   width: max-content;
 
-
-  
   .table-btn {
-
     display: flex;
     gap: 10px;
-    width: 203px;
-    height: 24px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 5px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
     margin: 0px 10px;
-    color: rgb(0, 0, 0);
-    font-family: Inter;
-    font-size: 20px;
+    color: $color-black;
+    font-size: 16px;
     font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0%;
-    text-align: left;
+    line-height: 130%;
     background-color: transparent;
 
     svg {
       width: 20px;
+    }
+
+    &:hover {
+      color: $color-brown;
+      box-shadow: none;
     }
   }
 }

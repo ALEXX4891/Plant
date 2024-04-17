@@ -23,5 +23,5 @@ export const images = () => {
     .pipe(app.gulp.dest(app.path.build.images)) // путь куда скопируем файлы
     .pipe(app.gulp.src(app.path.src.svg)) // выбираем svg
     .pipe(app.gulp.dest(app.path.build.images)) // путь куда скопируем svg
-    .pipe(app.plugins.browserSync.stream()); // обновляем браузер
+    // .pipe(app.plugins.browserSync.stream()); // обновляем браузер
 }

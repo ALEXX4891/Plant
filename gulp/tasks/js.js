@@ -16,5 +16,5 @@ export const js = () => {
     },
   }))
   .pipe(app.gulp.dest(app.path.build.js))  
-  .pipe(app.plugins.browserSync.stream());
+  // .pipe(app.plugins.browserSync.stream());
 };

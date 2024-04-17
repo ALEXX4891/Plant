@@ -1,3 +1,4 @@
+import { sassTrue } from "sass";
 import * as flsFunctions from "./modules/functions.js";
 
 flsFunctions.isWebp();
@@ -16,3 +17,9 @@ flsFunctions.isWebp();
 //     type: "bullets",
 //   },
 // })
+
+new SimpleBar(document.querySelector(".table-body-wrapper"), {
+  scrollbarMaxSize: 85,
+  autoHide: false,
+  forceVisible: true,
+});
