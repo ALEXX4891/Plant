@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('./html/head.html', {
+"title": "flower bridge",
+})
+
+<body>
+  <p class="page" hidden>Склад</p>
+  @@include('./html/header.html', {})
+
+  <main class="main">
+    <section class="section warehouse warehouse_report">
+      <!-- TODO почему секция в секции?? -->
+
+      <div class="container section__container">
+        <div class="section__content">
+          <div class="section__head">
+            <h1 class="section__title">
+              СКЛАД
+            </h1>
+
+            <div class="section__btn-complex btn-complex">
+              <a class="btn btn-reset btn-complex__btn btn_w_161 btn_m_0" href="warehouse.html">Редактор товаров</a>
+              <a class="btn btn-reset btn-complex__btn btn_w_240 btn_m_0 btn-complex__btn_active"
+                href="warehouse-report.html">Отчёт по движению
+                товаров</a>
+              <a class="btn btn-reset btn-complex__btn btn_w_230 btn_m_0" href="warehouse-remaining.html">Отчёт по
+                остаткам товаров</a>
+            </div>
+
+            <div class="input__wrapper">
+              <div class="section__input input input_w_150">
+                <label class="input__label">
+                  <input class="input__search" type="text" name="search">
+                  <span class="input__placeholder">Дата</span>
+                </label>
+              </div>
+
+              <div class="section__input input input_w_250">
+                <label class="input__label">
+                  <input class="input__search" type="text" name="search">
+                  <span class="input__placeholder">Приход/Расход</span>
+                </label>
+              </div>
+
+              <div class="section__input input input_w_250">
+                <label class="input__label">
+                  <input class="input__search" type="text" name="search">
+                  <span class="input__placeholder">Товар</span>
+                </label>
+              </div>
+
+            </div>
+
+            <button class="btn btn-reset btn_m_0 btn_mr_35 btn_white">Печать</button>
+
+          </div>
+
+          <div class="section__body">
+            <div class="table-head-wrapper">
+              <table class="section__table table">
+                <thead class="table__head">
+                  <tr class="table__row">
+                    <th class="table__column table__column_1">
+                      Товар, размер (ШxВ)
+                    </th>
+                    <th class="table__column table__column_2">
+                      Тип картона
+                    </th>
+                    <th class="table__column table__column_3">
+                      Дата
+                    </th>
+                    <th class="table__column table__column_4">
+                      Приход, шт
+                    </th>
+                    <th class="table__column table__column_5">
+                      Расход, шт
+                    </th>
+                    <th class="table__column table__column_6">
+                      Цена за шт., $
+                    </th>
+                    <th class="table__column table__column_7">
+                      Стоимость, $
+                    </th>
+                    <th class="table__column table__column_8">
+                      Контрагент
+                    </th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+
+            <div class="table-body-wrapper my-simplebar" data-simplebar>
+              <table class="section__table table">
+                <tbody class="table__body">
+                  <tr class="table__row table__row_title">
+                    <td class="table__column table__column_1">
+                      Лист 72x126
+                    </td>
+                    <td class="table__column table__column_2">
+                      Тип
+                    </td>
+                    <td class="table__column table__column_3">
+                    </td>
+                    <td class="table__column table__column_4">
+                    </td>
+                    <td class="table__column table__column_5">
+                    </td>
+                    <td class="table__column table__column_6">
+                    </td>
+                    <td class="table__column table__column_7">
+                    </td>
+                    <td class="table__column table__column_8">
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row table__row_res">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      ИТОГ
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      110
+                    </td>
+                    <td class="table__column table__column_6">
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                    </td>
+                  </tr>
+                  <tr class="table__row table__row_title">
+                    <td class="table__column table__column_1">
+                      Лист 72x126
+                    </td>
+                    <td class="table__column table__column_2">
+                      Тип
+                    </td>
+                    <td class="table__column table__column_3">
+                    </td>
+                    <td class="table__column table__column_4">
+                    </td>
+                    <td class="table__column table__column_5">
+                    </td>
+                    <td class="table__column table__column_6">
+                    </td>
+                    <td class="table__column table__column_7">
+                    </td>
+                    <td class="table__column table__column_8">
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row table__row_res">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      ИТОГ
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      110
+                    </td>
+                    <td class="table__column table__column_6">
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                    </td>
+                  </tr>
+                  <tr class="table__row table__row_title">
+                    <td class="table__column table__column_1">
+                      Лист 72x126
+                    </td>
+                    <td class="table__column table__column_2">
+                      Тип
+                    </td>
+                    <td class="table__column table__column_3">
+                    </td>
+                    <td class="table__column table__column_4">
+                    </td>
+                    <td class="table__column table__column_5">
+                    </td>
+                    <td class="table__column table__column_6">
+                    </td>
+                    <td class="table__column table__column_7">
+                    </td>
+                    <td class="table__column table__column_8">
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row table__row_res">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      ИТОГ
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      110
+                    </td>
+                    <td class="table__column table__column_6">
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                    </td>
+                  </tr>
+                  <tr class="table__row table__row_title">
+                    <td class="table__column table__column_1">
+                      Лист 72x126
+                    </td>
+                    <td class="table__column table__column_2">
+                      Тип
+                    </td>
+                    <td class="table__column table__column_3">
+                    </td>
+                    <td class="table__column table__column_4">
+                    </td>
+                    <td class="table__column table__column_5">
+                    </td>
+                    <td class="table__column table__column_6">
+                    </td>
+                    <td class="table__column table__column_7">
+                    </td>
+                    <td class="table__column table__column_8">
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row table__row_res">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      ИТОГ
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      110
+                    </td>
+                    <td class="table__column table__column_6">
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                    </td>
+                  </tr>
+                  <tr class="table__row table__row_title">
+                    <td class="table__column table__column_1">
+                      Лист 72x126
+                    </td>
+                    <td class="table__column table__column_2">
+                      Тип
+                    </td>
+                    <td class="table__column table__column_3">
+                    </td>
+                    <td class="table__column table__column_4">
+                    </td>
+                    <td class="table__column table__column_5">
+                    </td>
+                    <td class="table__column table__column_6">
+                    </td>
+                    <td class="table__column table__column_7">
+                    </td>
+                    <td class="table__column table__column_8">
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row table__row_res">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      ИТОГ
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      110
+                    </td>
+                    <td class="table__column table__column_6">
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                    </td>
+                  </tr>
+                  <tr class="table__row table__row_title">
+                    <td class="table__column table__column_1">
+                      Лист 72x126
+                    </td>
+                    <td class="table__column table__column_2">
+                      Тип
+                    </td>
+                    <td class="table__column table__column_3">
+                    </td>
+                    <td class="table__column table__column_4">
+                    </td>
+                    <td class="table__column table__column_5">
+                    </td>
+                    <td class="table__column table__column_6">
+                    </td>
+                    <td class="table__column table__column_7">
+                    </td>
+                    <td class="table__column table__column_8">
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row table__row_res">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      ИТОГ
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      110
+                    </td>
+                    <td class="table__column table__column_6">
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                    </td>
+                  </tr>
+                  <tr class="table__row table__row_title">
+                    <td class="table__column table__column_1">
+                      Лист 72x126
+                    </td>
+                    <td class="table__column table__column_2">
+                      Тип
+                    </td>
+                    <td class="table__column table__column_3">
+                    </td>
+                    <td class="table__column table__column_4">
+                    </td>
+                    <td class="table__column table__column_5">
+                    </td>
+                    <td class="table__column table__column_6">
+                    </td>
+                    <td class="table__column table__column_7">
+                    </td>
+                    <td class="table__column table__column_8">
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row table__row_res">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      ИТОГ
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      110
+                    </td>
+                    <td class="table__column table__column_6">
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                    </td>
+                  </tr>
+                  <tr class="table__row table__row_title">
+                    <td class="table__column table__column_1">
+                      Лист 72x126
+                    </td>
+                    <td class="table__column table__column_2">
+                      Тип
+                    </td>
+                    <td class="table__column table__column_3">
+                    </td>
+                    <td class="table__column table__column_4">
+                    </td>
+                    <td class="table__column table__column_5">
+                    </td>
+                    <td class="table__column table__column_6">
+                    </td>
+                    <td class="table__column table__column_7">
+                    </td>
+                    <td class="table__column table__column_8">
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      09.11.2023
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      0
+                    </td>
+                    <td class="table__column table__column_6">
+                      0,6
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                      ООО «Длинное болшое название»
+                    </td>
+                  </tr>
+                  <tr class="table__row table__row_res">
+                    <td class="table__column table__column_1">
+                    </td>
+                    <td class="table__column table__column_2">
+                    </td>
+                    <td class="table__column table__column_3">
+                      ИТОГ
+                    </td>
+                    <td class="table__column table__column_4">
+                      300
+                    </td>
+                    <td class="table__column table__column_5">
+                      110
+                    </td>
+                    <td class="table__column table__column_6">
+                    </td>
+                    <td class="table__column table__column_7">
+                      180
+                    </td>
+                    <td class="table__column table__column_8">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+
+        </div>
+        <!-- <a href="#" class="btn btn-reset">купить</a>
+        <button href="#" class="btn btn-reset">купить</button>
+        <a href="#" class="btn btn-reset btn_disabled">купить</a>
+        <button href="#" class="btn btn-reset btn_disabled">купить</button> -->
+      </div>
+    </section>
+  </main>
+
+  <div class="popup" id="popup">
+    <!-- закрыть модалку по клике на область вокруг -->
+    <div class="popup__body">
+      <div class="popup__content popup-deal">
+
+        <h3 class="popup__title">ООО «Длинное большое название»</h3>
+        <p class="popup__text">Вы действительно хотите переместить контрагента в архив?</p>
+        <div class="popup__btn-wrapper">
+          <button class="btn btn-reset popup__btn popup-close" href="#">Отменить</button>
+          <button class="btn btn_red btn-reset popup__btn popup-approval" href="#">Переместить</button>
+        </div>
+
+        <div class="popup__close popup-close">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17.8546 0.399985L10.0001 8.25454L2.14552 0.399985C1.91406 0.168523 1.60013 0.0384892 1.27279 0.0384892C0.945455 0.0384892 0.631526 0.168523 0.400064 0.399985C0.168602 0.631447 0.0385678 0.945377 0.0385678 1.27271C0.0385678 1.60005 0.168602 1.91398 0.400064 2.14544L8.25462 10L0.400064 17.8546C0.168602 18.086 0.0385678 18.3999 0.0385678 18.7273C0.0385678 19.0546 0.168602 19.3686 0.400064 19.6C0.631526 19.8315 0.945455 19.9615 1.27279 19.9615C1.60013 19.9615 1.91406 19.8315 2.14552 19.6L10.0001 11.7455L17.8546 19.6C18.0861 19.8315 18.4 19.9615 18.7274 19.9615C19.0547 19.9615 19.3686 19.8315 19.6001 19.6C19.8316 19.3686 19.9616 19.0546 19.9616 18.7273C19.9616 18.4 19.8316 18.086 19.6001 17.8546L11.7455 10L19.6001 2.14544C19.8316 1.91398 19.9616 1.60005 19.9616 1.27271C19.9616 0.945376 19.8316 0.631447 19.6001 0.399985C19.3686 0.168523 19.0547 0.0384886 18.7274 0.0384886C18.4 0.0384886 18.0861 0.168523 17.8546 0.399985Z"
+              fill="#222222" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('./html/footer.html', {})
+
+</body>
+
+</html>

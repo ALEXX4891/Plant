@@ -5,11 +5,12 @@
 })
 
 <body>
+  <p class="page" hidden>Контрагенты</p>
   @@include('./html/header.html', {})
 
   <main class="main">
 
-    <section class="section">
+    <section class="section contractors">
       <!-- TODO почему секция в секции?? -->
 
       <div class="container section__container">
@@ -47,6 +48,7 @@
                 <div class="toggle__knobs"></div>
                 <div class="toggle__layer"></div>
               </div>
+
             </div>
 
           </div>
@@ -1592,10 +1594,6 @@
 
 
         </div>
-        <!-- <a href="#" class="btn btn-reset">купить</a>
-        <button href="#" class="btn btn-reset">купить</button>
-        <a href="#" class="btn btn-reset btn_disabled">купить</a>
-        <button href="#" class="btn btn-reset btn_disabled">купить</button> -->
       </div>
     </section>
   </main>
@@ -1624,6 +1622,16 @@
   </div>
 
   @@include('./html/footer.html', {})
+
+  <script>
+    document.querySelector('.toggle').addEventListener('click', function () {
+      setTimeout(function () {
+        
+        document.location.href = "contractors-archive.html";
+      }, 300)
+    });
+
+  </script>
 </body>
 
 </html>

@@ -5,11 +5,12 @@
 })
 
 <body>
+  <p class="page" hidden>Контрагенты</p>
   @@include('./html/header.html', {})
 
   <main class="main">
 
-    <section class="section">
+    <section class="section contractors contractors_archive">
       <!-- TODO почему секция в секции?? -->
 
       <div class="container section__container">
@@ -1420,6 +1421,14 @@
   </div>
 
   @@include('./html/footer.html', {})
+
+  <script>
+    document.querySelector('.toggle').addEventListener('click', function () {
+      setTimeout(function () {        
+        document.location.href = "index.html";
+      }, 300)
+    });
+  </script>
 </body>
 
 </html>
