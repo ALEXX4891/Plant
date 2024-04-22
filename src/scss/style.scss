@@ -2163,13 +2163,15 @@ img {
 
 .print {
   padding: 16px 13px;
+  background-color: $color-white;
 }
 
 .header_print {
   padding: 0;
   background: none;
   max-width: 595px;
-  margin-bottom: 33px;
+  margin: 0 auto 33px;
+  // margin-bottom: 33px;
 }
 
 .container_print {
@@ -2185,6 +2187,7 @@ img {
 .main_print {
   .container_print {
     flex-flow: column nowrap;
+    align-items: flex-start;
   }
 }
 
@@ -2228,10 +2231,11 @@ img {
   height: auto;
 }
 
+.print__table {
+  width: 100%;
+}
+
 .invoice {
-  .print__table {
-    width: 100%;
-  }
   .table_print {
     width: 100%;
 
@@ -2297,7 +2301,7 @@ img {
 }
 
 .signature-wrap {
-  padding: 15px 9px;
+  padding: 15px 9px 0;
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -2328,7 +2332,7 @@ img {
     // margin-bottom: 12px;
   }
 
-  .signature__fild {    
+  .signature__fild {
     flex: 1 0 1%;
     border-bottom: 1px solid rgb(210, 210, 210);
     margin-bottom: 4px;
@@ -2338,6 +2342,304 @@ img {
 .print__date {
   padding: 0 9px;
   font-size: 12px;
+}
+
+.tz {
+  .header {
+    margin-bottom: 18px;
+    .container_print {
+      gap: 32px;
+    }
+  }
+
+  .print__table {
+    padding: 0 31.5px 0 6.5px;
+  }
+
+  .main {
+    .container_print {
+      gap: 7px;
+    }
+  }
+  .table_print_tz {
+    .table__column {
+      font-size: 10px;
+      height: 27px;
+      padding: 7px;
+    }
+
+    .table__column_1 {
+      width: 5.1%;
+      justify-content: flex-start;
+    }
+
+    .table__column_2 {
+      width: 16.4%;
+      justify-content: flex-start;
+    }
+
+    .table__column_3 {
+      width: 14%;
+    }
+
+    .table__column_4 {
+      width: 12.6%;
+    }
+
+    .table__column_5 {
+      width: 10.4%;
+    }
+
+    .table__column_6 {
+      width: 10.4%;
+    }
+
+    .table__column_7 {
+      width: 10.4%;
+    }
+
+    .table__column_8 {
+      width: 10.4%;
+    }
+
+    .table__column_9 {
+      width: 10.4%;
+    }
+  }
+
+  .signature-wrap {
+    padding: 11px 0 0;
+  }
+
+  .signature_producer {
+    flex: 0 1 45%;
+  }
+}
+
+.section__title_print {
+  font-size: 16px;
+  align-self: center;
+  text-transform: none;
+}
+
+.graphic {
+  .section__title_print {
+    align-self: flex-start;
+  }
+
+  .header {
+    margin: 0 auto 22px;
+  }
+
+  .main {
+    .container_print {
+      gap: 13px;
+    }
+  }
+
+  .signature-wrap {
+    padding: 8px 00;
+  }
+}
+
+.graphic__list {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px 18px;
+
+  .graphic__item {
+    flex: none;
+  }
+}
+
+.graf {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+
+  .graf__text {
+    color: rgb(0, 0, 0);
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 8.21px;
+  }
+  .graf__text_top {
+    height: 17px;
+  }
+  .graf__wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .graf__wrap_small {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrap {
+    gap: 0;
+  }
+  .graf__body {
+    width: 150px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+  }
+
+  .graf__line {
+    width: 100%;
+    height: 10px;
+    background-color: #a06928;
+  }
+
+  .graf__line:not(:last-child) {
+    border-bottom: 1px solid #000;
+  }
+
+  .graf__text_side {
+    width: 30px;
+    height: 100%;
+    text-align: end;
+  }
+
+  .graf__text_bottom {
+    height: 17px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  graf_15 {
+    width: 182px;
+
+    .graf__body {
+      width: 150px;
+    }
+  }
+
+  &_16 {
+    width: 192px;
+
+    .graf__body {
+      width: 160px;
+    }
+  }
+
+  &_18 {
+    width: 212px;
+
+    .graf__body {
+      width: 180px;
+    }
+  }
+
+  &_20 {
+    width: 232px;
+
+    .graf__body {
+      width: 200px;
+    }
+  }
+}
+
+.report {
+  .table__column_1 {
+    width: 10.4%;
+  }
+
+  .table__column_2 {
+    width: 12.3%;
+  }
+
+  .table__column_3 {
+    width: 12%;
+  }
+
+  .table__column_4 {
+    width: 14.1%;
+  }
+
+  .table__column_5 {
+    width: 13.9%;
+  }
+
+  .table__column_6 {
+    width: 37.4%;
+    justify-content: flex-start;
+  }
+
+  .header__title {
+    color: rgb(26, 26, 26);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 110%;
+  }
+
+  .header_print {
+    margin: 0 auto 30px;
+
+    .container_print {
+      justify-content: space-between;
+    }
+  }
+
+  .section__title_print {
+    font-size: 14px;
+  }
+
+  .section__title-wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 17px;
+  }
+
+  .table__column {
+    color: rgb(34, 34, 34);
+    font-size: 10px;
+    line-height: 130%;
+    height: 27px;
+  }
+
+  .container_print {
+    gap: 12px;
+  }
+
+  .report__wrap {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .signature-wrap {
+    padding: 0;
+    .signature_producer {
+      flex: 0 0 45%;
+    }
+  }
+}
+
+.report_remaining {
+
+  .print__table {
+    margin-bottom: 19px;
+  }
+  .table__column {
+    width: 20%;
+  }
 }
 
 // TODO заменить цвета на переменные
