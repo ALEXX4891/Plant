@@ -327,7 +327,7 @@ img {
     border: 1px solid rgb(210, 210, 210);
     border-radius: 0;
     background: rgb(249, 249, 249);
-    color: rgb(34, 34, 34);
+    color: rgba(34, 34, 34, 0.5);
     font-size: 16px;
     font-weight: 400;
     line-height: 110%;
@@ -582,7 +582,7 @@ img {
     align-items: center;
     justify-content: flex-start;
     gap: 8px;
-    width: 350px;
+    width: 100%;
     height: 50px;
     padding: 8px 12px 8px 12px;
     &_active svg {
@@ -642,6 +642,10 @@ img {
 
   &_w_250 {
     width: 250px;
+  }
+
+  &_w_350 {
+    width: 350px;
   }
 }
 
