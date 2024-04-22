@@ -203,7 +203,7 @@
                 <p class="calculating__field-text">5</p>
               </div>
               <div class="btn-wrapper">
-                <button class="btn btn-reset popup__btn popup-close btn_disabled" href="#">Распечатать этикетки</button>
+                <button class="btn btn-reset popup__btn popup-close" href="#">Распечатать этикетки</button>
                 <button class="btn btn_red btn-reset popup__btn popup-approval" href="#">Графика заказа</button>
               </div>
             </div>
@@ -370,7 +370,7 @@
                 <span class="calculating__field-title">НДС, %</span>
                 <p class="calculating__field-text">15</p>
               </div>
-              <button class="btn btn-reset btn_disabled">Рассчитать
+              <button class="btn btn-reset">Рассчитать
               </button>
             </div>
 
@@ -756,9 +756,9 @@
               </div>
 
               <div class="calculating__result result">
-  
+
                 <h2 class="section__subtitle result__subtitle">Итоги</h2>
-  
+
                 <div class="wrap wrap_vertical">
                   <div class="calculating__table calculating__table_res">
                     <table class="section__table table">
@@ -787,7 +787,7 @@
                           </th>
                         </tr>
                       </thead>
-  
+
                       <tbody class="table__body">
                         <tr class="table__row">
                           <td class="table__column table__column_1">
@@ -835,14 +835,13 @@
                             2
                           </td>
                         </tr>
-  
+
                       </tbody>
                     </table>
                   </div>
-                  <button class="btn btn-reset btn_w_245 btn_disabled">Распечатать ТЗ раскроя</button>
+                  <button class="btn btn_red btn-reset btn_w_245">Распечатать ТЗ раскроя</button>
                 </div>
-  
-  
+
                 <div class="calculating__table calculating__table_bot">
                   <table class="section__table table">
                     <thead class="table__head">
@@ -879,7 +878,7 @@
                         </th>
                       </tr>
                     </thead>
-  
+
                     <tbody class="table__body">
                       <tr class="table__row">
                         <td class="table__column table__column_1">
@@ -1028,27 +1027,24 @@
                           839,15
                         </td>
                       </tr>
-  
+
                     </tbody>
                   </table>
-  
                 </div>
-  
+
                 <div class="btn-wrapper">
-                  <button class="btn btn-reset btn_w_195 btn-variant">
-                    Выбрать вариант
+                  <button class="btn btn_red btn-reset btn_w_195 btn_w_201 btn-cancel">
+                    Отменить вариант
                   </button>
-                  <button class="btn btn-reset btn_w_195 btn_disabled">
+                  <button class="btn btn-reset btn_w_195 popup-link" href="#popup-create">
                     Создать фактуру
                   </button>
-  
                 </div>
-  
-  
+
               </div>
             </div>
 
-                        <div class="calculating__variant variant">
+            <div class="calculating__variant variant variant_disabled">
               <h2 class="section__subtitle variant__subtitle">Вариант 2</h2>
 
               <h2 class="section__text variant__text">Размер листа — 72х126 см</h2>
@@ -1423,9 +1419,9 @@
               </div>
 
               <div class="calculating__result result">
-  
+
                 <h2 class="section__subtitle result__subtitle">Итоги</h2>
-  
+
                 <div class="wrap wrap_vertical">
                   <div class="calculating__table calculating__table_res">
                     <table class="section__table table">
@@ -1454,7 +1450,7 @@
                           </th>
                         </tr>
                       </thead>
-  
+
                       <tbody class="table__body">
                         <tr class="table__row">
                           <td class="table__column table__column_1">
@@ -1502,14 +1498,14 @@
                             2
                           </td>
                         </tr>
-  
+
                       </tbody>
                     </table>
                   </div>
                   <button class="btn btn-reset btn_w_245 btn_disabled">Распечатать ТЗ раскроя</button>
                 </div>
-  
-  
+
+
                 <div class="calculating__table calculating__table_bot">
                   <table class="section__table table">
                     <thead class="table__head">
@@ -1546,7 +1542,7 @@
                         </th>
                       </tr>
                     </thead>
-  
+
                     <tbody class="table__body">
                       <tr class="table__row">
                         <td class="table__column table__column_1">
@@ -1695,44 +1691,47 @@
                           839,15
                         </td>
                       </tr>
-  
+
                     </tbody>
                   </table>
-  
+
                 </div>
-  
+
                 <div class="btn-wrapper">
-                  <button class="btn btn-reset btn_w_195 btn-variant">
+                  <button class="btn btn-reset btn_w_195 btn_disabled">
                     Выбрать вариант
                   </button>
                   <button class="btn btn-reset btn_w_195 btn_disabled">
                     Создать фактуру
                   </button>
-  
+
                 </div>
-  
-  
+
               </div>
             </div>
-
-
-
-
 
           </div>
     </section>
   </main>
 
-  <div class="popup" id="popup">
+  <div class="popup" id="popup-create">
     <!-- закрыть модалку по клике на область вокруг -->
     <div class="popup__body">
       <div class="popup__content popup-calculating">
 
-        <h3 class="popup__title">Сделка №123456</h3>
-        <p class="popup__text">Вы действительно хотите отправить фактуру клиенту?</p>
+        <h3 class="popup__title">
+          Создание фактуры
+        </h3>
+        <p class="popup__text">
+          Вы уверены что хотите создать фактуру?
+        </p>
         <div class="btn-wrapper">
-          <button class="btn btn_red btn-reset popup__btn popup-close" href="#">Отменить</button>
-          <button class="btn btn-reset popup__btn popup-approval" href="#">Отправить</button>
+          <button class="btn btn_red btn-reset popup__btn popup-close" href="#">
+            Отменить
+          </button>
+          <a class="btn btn-reset popup__btn popup-approval" href="deal.html">
+            Создать
+          </a>
         </div>
 
         <div class="popup__close popup-close">
@@ -1757,7 +1756,7 @@
         scrollbar-width: auto;
         -ms-overflow-style: auto;
       }
-  
+
       .simplebar-content-wrapper::-webkit-scrollbar,
       .simplebar-hide-scrollbar::-webkit-scrollbar {
         display: initial;
@@ -1780,7 +1779,6 @@
           elementToScroll.scrollTo({ left: event.deltaY > 0 ? elementToScroll.scrollLeft + 500 : elementToScroll.scrollLeft - 500, behavior: 'smooth' });
         }, 20);
       };
-
   </script>
 </body>
 

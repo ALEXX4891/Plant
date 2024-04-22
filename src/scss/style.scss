@@ -231,6 +231,11 @@ img {
   &_w_195 {
     width: 195px;
   }
+
+  &_w_201 {
+    width: 201px;
+  }
+
   &_w_229 {
     width: 229px;
   }
@@ -275,8 +280,8 @@ img {
     box-shadow: none;
   }
   &_disabled {
-    color: $color-black;
-    opacity: 0.55;
+    color: rgba($color-black, 0.55);
+    // opacity: 0.55;
     background: $color-gray;
     cursor: default;
     pointer-events: none;
@@ -833,7 +838,12 @@ img {
 }
 
 .btn-wrapper {
-  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+  // margin: 0 auto;
   width: max-content;
 
   .table-btn {
@@ -1120,6 +1130,10 @@ img {
   .table__column_6 {
     justify-content: flex-start;
   }
+
+  .btn-wrapper {
+    margin: 0 auto;
+  }
 }
 
 .deal {
@@ -1400,6 +1414,10 @@ img {
   justify-content: flex-start;
   gap: 15px;
   width: 100%;
+
+  &_disabled {
+    opacity: 0.3;
+  }
 }
 
 .result {
@@ -1709,19 +1727,18 @@ img {
       flex-flow: row wrap;
       align-items: flex-start;
       justify-content: flex-start;
-      gap: 20px;
+      gap: 15px;
     }
 
     .result {
       .btn {
-        margin: 0;;
+        margin: 0;
       }
 
       .table {
         margin: 0;
 
         .table__column_2 {
-          
         }
       }
 
@@ -1729,7 +1746,6 @@ img {
         gap: 15px;
         margin: 0;
       }
-
     }
   }
 
@@ -1778,6 +1794,10 @@ img {
     align-items: flex-start;
     justify-content: center;
     gap: 16px;
+
+    .btn {
+      margin: 0px;
+    }
   }
 
   &__fields-left {
@@ -1813,6 +1833,12 @@ img {
     justify-content: center;
     gap: 12px;
 
+    .btn-wrapper {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 15px;
+    }
+
     .btn {
       margin: 0px;
     }
@@ -1832,7 +1858,7 @@ img {
     .table__column {
       padding: 8px;
     }
-    
+
     .table__column {
       // padding: 5px 8px;
     }
@@ -1934,10 +1960,12 @@ img {
   }
 
   &__variant {
+    margin-bottom: 25px;
     .variant__text {
     }
 
     .variant__table-wrapper {
+      max-width: 906px;
       overflow: auto;
       width: 100%;
       height: 100%;
@@ -2031,7 +2059,6 @@ img {
   }
 
   .calculating__table_res {
-
     width: 710px;
     .table__column {
       // padding: 9px 8px;
@@ -2041,7 +2068,6 @@ img {
     .table__column_1 {
       width: 4.6%;
       justify-content: flex-start;
-
     }
 
     .table__column_2 {
@@ -2073,25 +2099,21 @@ img {
       width: 14.1%;
       text-align: center;
     }
-
   }
 
   .calculating__table_bot {
-
     // width: 100%;
     .table {
       width: 906px;
 
       .table__head {
-        .table__column{
+        .table__column {
           height: 58px;
           padding: 0;
         }
       }
     }
 
-
-    
     .table__column_1 {
       width: 3.6%;
       justify-content: flex-start;
@@ -2136,6 +2158,186 @@ img {
       width: 12.2%;
       text-align: center;
     }
-
   }
 }
+
+.print {
+  padding: 16px 13px;
+}
+
+.header_print {
+  padding: 0;
+  background: none;
+  max-width: 595px;
+  margin-bottom: 33px;
+}
+
+.container_print {
+  max-width: 569px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 19px;
+  // margin: 0 auto;
+}
+
+.main_print {
+  .container_print {
+    flex-flow: column nowrap;
+  }
+}
+
+.intelegence {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2px;
+}
+
+.header__customer-intelegence {
+  margin-left: 20px;
+}
+
+.intelegence__row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3px;
+}
+
+.intelegence__title {
+  color: rgb(26, 26, 26);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.intelegence__text {
+  color: rgb(26, 26, 26);
+  font-size: 11px;
+  line-height: 110%;
+}
+
+.section_print {
+  box-shadow: none;
+  background: none;
+  padding: 0;
+  height: auto;
+}
+
+.invoice {
+  .print__table {
+    width: 100%;
+  }
+  .table_print {
+    width: 100%;
+
+    .table__column {
+      font-size: 12px;
+      height: 27px;
+    }
+
+    .table__column_1 {
+      width: 10.4%;
+      justify-content: flex-start;
+    }
+
+    .table__column_2 {
+      width: 31.3%;
+      justify-content: flex-start;
+    }
+
+    .table__column_3 {
+      width: 15%;
+    }
+
+    .table__column_4 {
+      width: 13.7%;
+    }
+
+    .table__column_5 {
+      width: 17.8%;
+    }
+
+    .table__column_6 {
+      width: 12%;
+    }
+  }
+
+  .main_print {
+    .container_print {
+      gap: 16px;
+    }
+  }
+
+  .print__table-info {
+    width: 223px;
+    align-self: flex-end;
+
+    .table__row {
+      // width: 100%;
+    }
+    .table__column {
+      font-weight: 700;
+    }
+
+    .table__column_1 {
+      width: 75.8%;
+      justify-content: flex-start;
+    }
+
+    .table__column_2 {
+      width: 24.2%;
+      justify-content: flex-start;
+    }
+  }
+}
+
+.signature-wrap {
+  padding: 15px 9px;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 33px;
+
+  .signature {
+    flex: 1 1 50%;
+    font-size: 12px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .signature__row {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 11px;
+  }
+
+  .signature__title {
+    // margin-bottom: 12px;
+  }
+
+  .signature__fild {    
+    flex: 1 0 1%;
+    border-bottom: 1px solid rgb(210, 210, 210);
+    margin-bottom: 4px;
+  }
+}
+
+.print__date {
+  padding: 0 9px;
+  font-size: 12px;
+}
+
+// TODO заменить цвета на переменные
