@@ -418,16 +418,6 @@ img {
   height: 100%;
   margin: auto;
 }
-.checkbox {
-  // ion: checkbox-outline;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  left: 82px;
-  right: 20px;
-  top: 20px;
-  bottom: 20px;
-}
 .header {
   padding: 0 30px;
   background-color: $color-brown;
@@ -2637,12 +2627,72 @@ img {
 }
 
 .report_remaining {
-
   .print__table {
     margin-bottom: 19px;
   }
   .table__column {
     width: 20%;
+  }
+}
+
+.checkbox__label {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+  padding-left: 34px;
+  cursor: pointer;
+}
+
+.checkbox__input {
+  display: none;
+}
+
+.checkbox__input + span {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.checkbox__input + span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("@img/mark.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.checkbox__input:checked + span::before {
+  opacity: 1;
+}
+
+.checkbox__input:checked + span {
+  border-color: #225F0D;
+  background-color: #225F0D;
+}
+
+.checkbox_blocked {
+  pointer-events: none;
+
+  .checkbox__input + span {
+    border-color: #225F0D;
+    background-color: #225F0D;
+  }
+
+  span::before {
+    opacity: 1;
   }
 }
 
