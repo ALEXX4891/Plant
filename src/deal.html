@@ -4,13 +4,13 @@
 "title": "flower bridge",
 })
 
-<body>
+<body class="deal">
   <p class="page" hidden>Архив сделок</p>
   @@include('./html/header.html', {})
 
   <main class="main">
 
-    <section class="section deal">
+    <section class="section">
 
       <div class="container section__container">
         <div class="section__content deal__content">
@@ -158,7 +158,7 @@
               </div>
               <div class="popup__btn-wrapper">
                 <a class="btn btn-reset popup__btn popup-close">Распечатать этикетки</a>
-                <a class="btn btn_red btn-reset popup__btn popup-approval" href="order-graphic.html" href="#">Графика заказа</a>
+                <a class="btn btn_red btn-reset popup__btn popup-approval" onclick='window.location.href="order-graphic.html"'>Графика заказа</a>
               </div>
             </div>
           </div>

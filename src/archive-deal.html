@@ -20,34 +20,27 @@
             </h1>
 
             <div class="section__input input input_date">
+              <!-- <div class="section__input input input_date" onclick='window.location.href="index.html"' > -->
+              <!-- TODO заменить код переходов на onclick -->
+
               <label class="input__label">
                 <input class="input__date" type="date" name="date" placeholder="Дата">
               </label>
             </div>
-            <div class="section__input input input_select">
-              <label class="input__label">
-                <select class="input__select" name="select">
+
+            <div class="section__input input_select ">
+              <span class="input__placeholder">Контрагент</span>
+                <select class="input__select input_castom">
+                <!-- <select class="input__select input_castom" name="select"> -->
+
                   <option value="">Контрагент</option>
                   <option value="Выбор 1">ООО «Длинное большое название»</option>
-                  <option value="Выбор 2">ООО «Длинное большое название»</option>
-                  <option value="Выбор 3">ООО «Длинное большое название»</option>
+                  <option value="Выбор 2">ООО «Длинное большое название1»</option>
+                  <option value="Выбор 3">ООО «Длинное большое название2»</option>
+                  <option value="Выбор 4">ООО «Длинное большое название3»</option>
+                  <option value="Выбор 5">ООО «Длинное большое название4»</option>
+                  <option value="Выбор 6">ООО «Длинное большое название5»</option>
                 </select>
-              </label>
-
-              <!-- <section class="section select">
-                <h2 class="visually-hidden">Кастомный выпадающий список</h2>
-                <div class="container select__container">
-                  <select class="select__form" name="select">
-                    <option value="">Материал</option>
-                    <option value="Выбор 1">Древесина</option>
-                    <option value="Выбор 2">Металл</option>
-                    <option value="Выбор 3">Камень</option>
-                    <option value="Выбор 4">Пластик</option>
-                    <option value="Выбор 5">Композитный</option>
-                    <option value="Выбор 6">Гипс</option>
-                  </select>
-                </div>
-              </section> -->
             </div>
           </div>
 
@@ -1689,6 +1682,9 @@
     </div>
   </div>
 
+
+  @@include('./html/footer.html', {})
+
   <script>
     // const rows = [];
     // const allRow = document.querySelectorAll('.table__row');
@@ -1711,7 +1707,7 @@
 
     document.addEventListener("click", function (e) {
       // const target = e.target;
-      console.log(e.target.classList);
+      // console.log(e.target.classList);
       if (e.target.closest(".table__body")) {
         if (e.target.classList.contains("table__column_1") ||
           e.target.closest(".table__column_2") ||
@@ -1725,12 +1721,27 @@
           window.location.href = 'deal.html';
         }
       }
-    })
+    });
+
+    // setTimeout(function () {
+      if (document.querySelector('.choices')) {
+        const placeholder = document.createElement('div');
+        placeholder.classList.add('input__placeholder');
+        placeholder.innerText = 'Контрагент1';
+        document.querySelector('.choices').append(placeholder);
+
+        // console.log(document.querySelector('.choices'));
+        // document.querySelector('.choices').append(`<div class="choices__placeholder">Показать еще</div>`);
+      }
+      
+    // })
+
 
 
   </script>
 
-  @@include('./html/footer.html', {})
+
+
 </body>
 
 </html>

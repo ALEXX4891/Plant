@@ -4,13 +4,13 @@
 "title": "flower bridge",
 })
 
-<body>
+<body class="calculating">
   <p class="page" hidden>Расчёт разделителей</p>
   @@include('./html/header.html', {})
 
   <main class="main">
 
-    <section class="section calculating">
+    <section class="section">
 
       <div class="container section__container">
         <div class="section__content calculating__content">
@@ -204,7 +204,7 @@
               </div>
               <div class="btn-wrapper">
                 <button class="btn btn-reset popup__btn popup-close" href="#">Распечатать этикетки</button>
-                <button class="btn btn_red btn-reset popup__btn popup-approval" href="#">Графика заказа</button>
+                <a class="btn btn_red btn-reset popup__btn popup-approval" onclick='window.location.href="order-graphic.html"'>Графика заказа</a>
               </div>
             </div>
             <div class="wrap wrap_vertical calculating__availability">
@@ -840,7 +840,9 @@
                       </tbody>
                     </table>
                   </div>
-                  <button class="btn btn_red btn-reset btn_w_245">Распечатать ТЗ раскроя</button>
+                  <a class="btn btn_red btn-reset btn_w_245" href="tz.html">
+                    Распечатать ТЗ раскроя
+                  </a>
                 </div>
 
                 <div class="calculating__table calculating__table_bot">

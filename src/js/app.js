@@ -17,6 +17,20 @@
 //   },
 // })
 
+//кастомный select
+// const element1 = document.querySelector("select");
+// const choices1 = new Choices(element1, {
+//   // renderChoiceLimit: 3,
+//   // maxItemCount: 3,
+//   itemSelectText: "",
+//   searchEnabled: false,
+//   shouldSort: false,
+//   noResultsText: 'ни чего не найдено',
+//   placeholder: true,
+// });
+
+
+
 const navLlink = document.querySelectorAll(".nav__link");
 const thisPage = document.querySelector(".page").innerHTML;
 if (navLlink) {
