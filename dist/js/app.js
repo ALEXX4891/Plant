@@ -30,6 +30,69 @@
 // });
 
 
+const selectField = document.querySelectorAll(".my-select");
+const selectFieldMult = document.querySelectorAll(".my-select_multiple");
+
+const selectList = document.querySelectorAll(".my-select__list");
+const selectItem = document.querySelectorAll(".my-select__item");
+
+if (selectFieldMult) {
+  selectFieldMult.forEach((item) => {
+    item.addEventListener("click", function () {
+      item.classList.toggle("my-select_multiple_open");
+    });
+  });
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".my-select_multiple")) {
+      selectFieldMult.forEach((item) => {
+        item.classList.remove("my-select_multiple_open");
+      });
+    } 
+  })
+}
+
+if (selectField) {
+  selectField.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      item.classList.toggle("my-select_open");
+    });
+  });
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".my-select")) {
+      selectField.forEach((item) => {
+        item.classList.remove("my-select_open");
+      });
+    } else {
+      
+    }
+  })
+  
+  selectItem.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      const text = item.closest(".my-select").querySelector(".my-select__text");
+      text.innerHTML = item.innerHTML;
+      text.classList.add("my-select__text_active");
+      // text.setAttribute("data-value", item.getAttribute("data-value"));
+      e.stopPropagation();
+      // console.log(item);
+      item.closest(".my-select").classList.remove("my-select_open");
+      item.closest(".my-select").classList.add("my-select_active");
+
+    });
+  });
+}
+
+
+// const popupCloseIcon = document.querySelectorAll(".popup-close");
+// if (popupCloseIcon.length > 0) {
+//   for (let index = 0; index < popupCloseIcon.length; index++) {
+//     const el = popupCloseIcon[index];
+//     el.addEventListener("click", function (e) {
+//       popupClose(el.closest(".popup")); //ближайший родитель класса popup
+//       e.preventDefault();
+//     });
+//   }
+// }
 
 const navLlink = document.querySelectorAll(".nav__link");
 const thisPage = document.querySelector(".page").innerHTML;
@@ -63,12 +126,17 @@ if (document.querySelector(".my-simplebar-2")) {
   });  
 }
 
-if (document.querySelector(".my-simplebar-input")) {
-  const simpleBar2 = new SimpleBar(document.querySelector(".my-simplebar-input"), {
-    scrollbarMaxSize: 45,
-    autoHide: false,
-    forceVisible: true,
-  });  
+
+
+if (document.querySelectorAll(".my-simplebar-input")) {
+  document.querySelectorAll(".my-simplebar-input").forEach((item) => {
+    new SimpleBar(item, {
+      scrollbarMaxSize: 45,
+      scrollbarMinSize: 33,
+      autoHide: false,
+      forceVisible: true,
+    })
+  })
 }
 
 const btnVariant = document.querySelectorAll(".btn-variant");

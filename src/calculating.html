@@ -42,21 +42,18 @@
                   </div>
                 </div>
                 <div class="calculating__fields-right">
-                  <div class="my-select my-select_w_350" onclick="document.querySelector('.my-select').classList.toggle('my-select_open')">
+                  
+                  <div class="my-select my-select_w_350">
                     <div class="my-select__wrapper">
                       <span class="my-select__placeholder">
                         Контрагент
                       </span>
                       <p class="my-select__text">
-                        ООО «Длинное большое название»
                       </p>
                     </div>
-
                     <span class="my-select__arrow">
                       <img src="@img/arrow-down.svg" alt="arrow">
                     </span>
-
-
                       <ul class="my-select__list my-simplebar-input" data-simplebar>
                         <li class="my-select__item">ООО «Длинное большое название»</li>
                         <li class="my-select__item">ООО «Длинное большое название»</li>
@@ -67,13 +64,12 @@
                         <li class="my-select__item">ООО «Длинное большое название»</li>
                         <li class="my-select__item">ООО «Длинное большое название»</li>
                         <li class="my-select__item">ООО «Длинное большое название»</li>
-                      </ul>                  
-
+                      </ul>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="calculating__table calculating__table">
+            <div class="calculating__table">
               <table class="section__table table">
                 <thead class="table__head">
                   <tr class="table__row">
@@ -206,7 +202,7 @@
                 </tbody>
               </table>
 
-              <div class="btn-wrapper">
+              <div class="btn-wrapper btn-wrapper_table">
                 <button class="btn btn-reset table-btn popup-link" href="#popup-form">
                   Добавить строку
                   <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1788,7 +1784,7 @@
     </style>
   </noscript>
 
-  <script>
+  <script> 
     //  горизонтальная прокрутка simplebar:
     let horizontalElements = document.querySelectorAll('.data-simplebar-h');
     for (let element of horizontalElements)
