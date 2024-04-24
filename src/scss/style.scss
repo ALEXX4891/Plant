@@ -938,6 +938,7 @@ img {
   &__icon {
     z-index: 1;
     opacity: 0.5;
+    pointer-events: none;
   }
   &__search {
     position: absolute;
@@ -963,10 +964,11 @@ img {
     }
     
   }
-  &:focus-visible {
+  &:hover {
     // outline: none;
     // border: none;
-    // background-color: $color-F9F9F9;
+    background-color: $color-F9F9F9;
+    border-color: $color-8C8B8B;
     + .input__icon {
       // opacity: 1;
     }
@@ -998,6 +1000,7 @@ img {
     top: 15px;
     left: 44px;
     color: rgba(#150000, 0.5);
+    pointer-events: none;
   }
 }
 
@@ -1362,6 +1365,13 @@ img {
       height: 100%;
       opacity: 1;
     }
+  }
+
+  &:hover {
+    // outline: none;
+    // border: none;
+    background-color: $color-F9F9F9;
+    border-color: $color-8C8B8B;
   }
 }
 

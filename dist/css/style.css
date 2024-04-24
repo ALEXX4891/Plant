@@ -849,6 +849,7 @@ img {
 .input__icon {
   z-index: 1;
   opacity: 0.5;
+  pointer-events: none;
 }
 .input__search {
   position: absolute;
@@ -867,6 +868,10 @@ img {
   top: 9px;
   left: 44px;
 }
+.input:hover {
+  background-color: #f9f9f9;
+  border-color: #8c8b8b;
+}
 .input_w_150 {
   width: 150px;
 }
@@ -884,6 +889,7 @@ img {
   top: 15px;
   left: 44px;
   color: rgba(21, 0, 0, 0.5);
+  pointer-events: none;
 }
 
 .table-head-wrapper {
@@ -1175,6 +1181,10 @@ img {
   width: 100%;
   height: 100%;
   opacity: 1;
+}
+.input_search-field:hover {
+  background-color: #f9f9f9;
+  border-color: #8c8b8b;
 }
 
 .input_date {
