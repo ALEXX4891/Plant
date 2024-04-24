@@ -63,6 +63,14 @@ if (document.querySelector(".my-simplebar-2")) {
   });  
 }
 
+if (document.querySelector(".my-simplebar-input")) {
+  const simpleBar2 = new SimpleBar(document.querySelector(".my-simplebar-input"), {
+    scrollbarMaxSize: 45,
+    autoHide: false,
+    forceVisible: true,
+  });  
+}
+
 const btnVariant = document.querySelectorAll(".btn-variant");
 if (btnVariant) {
   btnVariant.forEach((item) => {
