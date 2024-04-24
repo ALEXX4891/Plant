@@ -439,7 +439,7 @@ img {
   justify-content: flex-start;
 }
 .my-select_multiple .my-select__checkbox .checkbox__mark {
-  top: 0;
+  top: 8px;
   width: 17px;
   height: 17px;
   border: 1.06px solid rgb(210, 210, 210);
@@ -856,30 +856,16 @@ img {
   left: 0;
   height: 100%;
   width: 100%;
-  padding: 13px 44px 0 44px;
+  padding: 13px 44px 0 0;
   font-size: 16px;
   line-height: 110%;
   border: none;
   border-radius: 5px;
 }
-.input__search:focus-visible {
-  outline: none;
-  border: none;
-  background-color: #f9f9f9;
-}
-.input__search:focus-visible + .input__icon {
-  opacity: 1;
-}
-.input__search:focus-visible ~ .input__placeholder {
-  top: 18%;
+.input .input_search_active .input__placeholder {
   font-size: 10px;
-}
-.input__placeholder {
-  position: absolute;
-  top: 30%;
+  top: 9px;
   left: 44px;
-  opacity: 0.5;
-  z-index: 1;
 }
 .input_w_150 {
   width: 150px;
@@ -893,6 +879,13 @@ img {
 .input_w_350 {
   width: 350px;
 }
+.input__placeholder {
+  position: absolute;
+  top: 15px;
+  left: 44px;
+  color: rgba(21, 0, 0, 0.5);
+}
+
 .table-head-wrapper {
   padding-right: 30px;
 }
@@ -1133,9 +1126,59 @@ img {
   line-height: 110%;
 }
 
+.input_search-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3px;
+  width: 150px;
+  height: 50px;
+  border: 1px solid rgb(210, 210, 210);
+  border-radius: 7px;
+  background: rgb(255, 255, 255);
+}
+.input_search-field_w_250 {
+  width: 250px;
+}
+.input_search-field_w_230 {
+  width: 230px;
+}
+.input_search-field_w_280 {
+  width: 280px;
+}
+.input_search-field_w_350 {
+  width: 350px;
+}
+.input_search-field .input__placeholder {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  pointer-events: none;
+}
+.input_search-field .input__field-input {
+  padding-top: 14px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  padding: 13px 12px 0;
+}
+.input_search-field_active .input__placeholder {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  font-size: 10px;
+  line-height: 110%;
+  height: auto;
+}
+.input_search-field_active .input__field-input {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
 .input_date {
   position: relative;
-  padding: 8px;
   margin-right: 0;
   width: 150px;
   height: 48px;
@@ -1169,8 +1212,8 @@ img {
 }
 .input_date .input__calendar {
   position: absolute;
-  top: 5px 10px;
-  right: 7px;
+  top: 13px;
+  right: 11px;
   width: 25px;
   background: #fff;
   z-index: 1;
@@ -1178,12 +1221,17 @@ img {
   cursor: pointer;
 }
 .input_date_active .input__placeholder {
-  display: none;
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  font-size: 10px;
+  line-height: 110%;
+  height: auto;
 }
 .input_date_active .input__datepicker {
+  padding: 15px 9px 0;
   opacity: 1;
 }
-
 .section__head_archive {
   justify-content: flex-start;
 }
@@ -1512,10 +1560,7 @@ img {
   text-align: center;
 }
 .deal__table .table__cell-frame {
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 .deal__checkbox {
   margin-bottom: 25px;
@@ -1913,31 +1958,6 @@ img {
   gap: 15px;
   margin: 0;
 }
-.calculating__field {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 3px;
-  width: 150px;
-  height: 50px;
-  border: 1px solid rgb(210, 210, 210);
-  border-radius: 7px;
-  background: rgb(255, 255, 255);
-  padding: 8px 12px;
-}
-.calculating__field_w_250 {
-  width: 250px;
-}
-.calculating__field_w_230 {
-  width: 230px;
-}
-.calculating__field_w_280 {
-  width: 280px;
-}
-.calculating__field_w_350 {
-  width: 350px;
-}
 .calculating__main-info {
   display: flex;
   flex-flow: column nowrap;
@@ -2025,19 +2045,11 @@ img {
   width: 9.1%;
   text-align: center;
 }
-.calculating .table .table__column_6 {
-  width: 9.1%;
-  text-align: center;
-}
-.calculating .table .table__column_7 {
-  width: 9.1%;
-  text-align: center;
+.calculating .table .table__column_5 svg {
+  cursor: pointer;
 }
 .calculating .table .table__cell-frame {
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 .calculating__availability {
   align-items: start;
@@ -2617,6 +2629,8 @@ img {
   margin-bottom: 10px;
   padding-left: 34px;
   cursor: pointer;
+  width: 100%;
+  height: 100%;
 }
 
 .checkbox__input {

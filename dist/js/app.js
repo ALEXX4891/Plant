@@ -29,6 +29,38 @@
 //   placeholder: true,
 // });
 
+const fieldInput1 = document.querySelector("#field-input-1");
+const btn1 = document.querySelector("#btn-1");
+
+if (fieldInput1) {
+  fieldInput1.addEventListener("input", function () {
+    if (fieldInput1.value.length > 0) {
+      btn1.classList.remove("btn_disabled");
+    } else {
+      btn1.classList.add("btn_disabled");
+    }
+  });
+}
+
+const inputSearch = document.querySelectorAll(".input_search");
+if (inputSearch) {
+  inputSearch.forEach((item) => {
+    item.addEventListener("click", function () {
+      item.classList.add("input_search_active");
+    });
+  });
+}
+
+const inputFields = document.querySelectorAll(".input_search-field");
+
+if (inputFields) {
+  inputFields.forEach((item) => {
+    item.addEventListener("click", function () {
+      item.classList.add("input_search-field_active");
+    });
+  });
+}
+
 const inputDate = document.querySelectorAll(".input_date");
 if (inputDate) {
   inputDate.forEach((item) => {
@@ -37,8 +69,6 @@ if (inputDate) {
     });
   });
 }
-
-
 
 const selectField = document.querySelectorAll(".my-select");
 const selectFieldMult = document.querySelectorAll(".my-select_multiple");
@@ -57,8 +87,8 @@ if (selectFieldMult) {
       selectFieldMult.forEach((item) => {
         item.classList.remove("my-select_multiple_open");
       });
-    } 
-  })
+    }
+  });
 }
 
 if (selectField) {
@@ -73,10 +103,9 @@ if (selectField) {
         item.classList.remove("my-select_open");
       });
     } else {
-      
     }
-  })
-  
+  });
+
   selectItem.forEach((item) => {
     item.addEventListener("click", function (e) {
       const text = item.closest(".my-select").querySelector(".my-select__text");
@@ -87,11 +116,9 @@ if (selectField) {
       // console.log(item);
       item.closest(".my-select").classList.remove("my-select_open");
       item.closest(".my-select").classList.add("my-select_active");
-
     });
   });
 }
-
 
 // const popupCloseIcon = document.querySelectorAll(".popup-close");
 // if (popupCloseIcon.length > 0) {
@@ -118,7 +145,6 @@ if (navLlink) {
 //   document.querySelector("main").classList.add("main_active");
 // }, 200);
 
-
 // simplebar:
 if (document.querySelector(".my-simplebar-1")) {
   const simpleBar1 = new SimpleBar(document.querySelector(".my-simplebar-1"), {
@@ -133,10 +159,8 @@ if (document.querySelector(".my-simplebar-2")) {
     scrollbarMaxSize: 85,
     autoHide: false,
     forceVisible: true,
-  });  
+  });
 }
-
-
 
 if (document.querySelectorAll(".my-simplebar-input")) {
   document.querySelectorAll(".my-simplebar-input").forEach((item) => {
@@ -145,8 +169,8 @@ if (document.querySelectorAll(".my-simplebar-input")) {
       scrollbarMinSize: 33,
       autoHide: false,
       forceVisible: true,
-    })
-  })
+    });
+  });
 }
 
 const btnVariant = document.querySelectorAll(".btn-variant");
@@ -154,7 +178,7 @@ if (btnVariant) {
   btnVariant.forEach((item) => {
     item.addEventListener("click", function () {
       // window.location.href = item.getAttribute("href");
-      window.location.href = 'calculating-done.html';
+      window.location.href = "calculating-done.html";
     });
   });
 }
@@ -163,9 +187,9 @@ const btnCancel = document.querySelectorAll(".btn-cancel");
 if (btnCancel) {
   btnCancel.forEach((item) => {
     item.addEventListener("click", function () {
-      window.location.href = 'calculating.html';
+      window.location.href = "calculating.html";
     });
-  });  
+  });
 }
 
 // popup:
