@@ -29,6 +29,16 @@
 //   placeholder: true,
 // });
 
+const inputDate = document.querySelectorAll(".input_date");
+if (inputDate) {
+  inputDate.forEach((item) => {
+    item.addEventListener("click", function () {
+      item.classList.add("input_date_active");
+    });
+  });
+}
+
+
 
 const selectField = document.querySelectorAll(".my-select");
 const selectFieldMult = document.querySelectorAll(".my-select_multiple");

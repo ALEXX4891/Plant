@@ -444,6 +444,13 @@ img {
   height: 17px;
   border: 1.06px solid rgb(210, 210, 210);
 }
+.my-select_multiple .my-select__checkbox .checkbox__input + span::before {
+  background-size: 66%;
+}
+.my-select_multiple .my-select__checkbox .checkbox__input:checked + span {
+  border: none !important;
+  background-color: #225f0d;
+}
 
 .btn {
   display: flex;
@@ -527,6 +534,7 @@ img {
 }
 .btn_red:hover {
   background: #570000;
+  box-shadow: 0px 4px 7px 0px rgba(87, 0, 0, 0.4);
 }
 .btn_white {
   background-color: #fff;
@@ -541,7 +549,8 @@ img {
   gap: 10px;
 }
 .btn_white:hover {
-  background: #570000;
+  background: #143a07;
+  border-color: #143a07;
 }
 
 .btn-complex {
@@ -549,8 +558,6 @@ img {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  border-radius: 7px;
-  border: 1px solid rgb(210, 210, 210);
   overflow: hidden;
 }
 .btn-complex__btn {
@@ -565,9 +572,27 @@ img {
   padding: 0;
   height: 50px;
 }
+.btn-complex__btn:hover {
+  background: #d2d2d2;
+  color: rgba(34, 34, 34, 0.5);
+}
+.btn-complex__btn:active {
+  outline: none;
+}
+.btn-complex__btn:first-child {
+  border-radius: 7px 0 0 7px;
+}
+.btn-complex__btn:first-child:hover {
+  box-shadow: none;
+}
+.btn-complex__btn:last-child {
+  border-radius: 0 7px 7px 0;
+}
+.btn-complex__btn:last-child:hover {
+  box-shadow: none;
+}
 .btn-complex__btn_active {
-  border-bottom: 1px solid rgb(210, 210, 210);
-  border-top: 1px solid rgb(210, 210, 210);
+  border: none;
   background: rgb(34, 95, 13);
   color: rgb(255, 255, 255);
   font-size: 16px;
@@ -868,7 +893,6 @@ img {
 .input_w_350 {
   width: 350px;
 }
-
 .table-head-wrapper {
   padding-right: 30px;
 }
@@ -1027,6 +1051,10 @@ img {
   text-align: right;
 }
 
+.table_red .table__body .table__row:hover .table__column {
+  background: rgba(87, 0, 0, 0.15);
+}
+
 .btn-wrapper {
   display: flex;
   flex-flow: row wrap;
@@ -1105,16 +1133,55 @@ img {
   line-height: 110%;
 }
 
-.input__date {
-  width: 100%;
-  height: 100%;
-}
-
 .input_date {
+  position: relative;
+  padding: 8px;
   margin-right: 0;
-}
-.input_date .input__label {
   width: 150px;
+  height: 48px;
+  cursor: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  border: 1px solid rgb(210, 210, 210);
+  transition: all 0.3s ease-in-out;
+}
+.input_date:hover {
+  border: 1px solid rgb(140, 139, 139);
+  background: rgb(249, 249, 249);
+}
+.input_date .input__datepicker {
+  width: 100%;
+}
+.input_date_w_250 {
+  width: 250px;
+}
+.input_date .input__datepicker {
+  opacity: 0;
+}
+.input_date .input__placeholder {
+  position: absolute;
+  top: 13px;
+  left: 10px;
+  text-align: start;
+  pointer-events: none;
+}
+.input_date .input__calendar {
+  position: absolute;
+  top: 5px 10px;
+  right: 7px;
+  width: 25px;
+  background: #fff;
+  z-index: 1;
+  pointer-events: none;
+  cursor: pointer;
+}
+.input_date_active .input__placeholder {
+  display: none;
+}
+.input_date_active .input__datepicker {
+  opacity: 1;
 }
 
 .section__head_archive {
@@ -1505,6 +1572,7 @@ img {
 }
 .variant_disabled {
   opacity: 0.3;
+  pointer-events: none;
 }
 
 .result {

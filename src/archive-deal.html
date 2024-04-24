@@ -20,33 +20,39 @@
             </h1>
 
             <div class="section__input input input_date">
-              <!-- <div class="section__input input input_date" onclick='window.location.href="index.html"' > -->
-              <!-- TODO заменить код переходов на onclick -->
-
-              <label class="input__label">
-                <input class="input__date" type="date" name="date" placeholder="Дата">
-              </label>
+                <input class="input__datepicker" type="date" name="date" placeholder="Дата">
+                <span class="input__placeholder">Дата</span>
+                <img class="input__calendar" src="@img/calendar.png">
             </div>
 
-            <div class="section__input input_select ">
-              <span class="input__placeholder">Контрагент</span>
-                <select class="input__select input_castom">
-                <!-- <select class="input__select input_castom" name="select"> -->
-
-                  <option value="">Контрагент</option>
-                  <option value="Выбор 1">ООО «Длинное большое название»</option>
-                  <option value="Выбор 2">ООО «Длинное большое название1»</option>
-                  <option value="Выбор 3">ООО «Длинное большое название2»</option>
-                  <option value="Выбор 4">ООО «Длинное большое название3»</option>
-                  <option value="Выбор 5">ООО «Длинное большое название4»</option>
-                  <option value="Выбор 6">ООО «Длинное большое название5»</option>
-                </select>
+            <div class="my-select my-select_w_350">
+              <div class="my-select__wrapper">
+                <span class="my-select__placeholder">
+                  Контрагент
+                </span>
+                <p class="my-select__text">
+                </p>
+              </div>
+              <span class="my-select__arrow">
+                <img src="@img/arrow-down.svg" alt="arrow">
+              </span>
+                <ul class="my-select__list my-simplebar-input" data-simplebar>
+                  <li class="my-select__item">ООО «Длинное большое название»</li>
+                  <li class="my-select__item">ООО «Длинное большое название»</li>
+                  <li class="my-select__item">ООО «Длинное большое название»</li>
+                  <li class="my-select__item">ООО «Длинное большое название»</li>
+                  <li class="my-select__item">ООО «Длинное большое название»</li>
+                  <li class="my-select__item">ООО «Длинное большое название»</li>
+                  <li class="my-select__item">ООО «Длинное большое название»</li>
+                  <li class="my-select__item">ООО «Длинное большое название»</li>
+                  <li class="my-select__item">ООО «Длинное большое название»</li>
+                </ul>
             </div>
           </div>
 
           <div class="section__body">
             <div class="table-head-wrapper table-head-wrapper_archive">
-              <table class="section__table table">
+              <table class="section__table table table_red">
                 <thead class="table__head">
                   <tr class="table__row">
                     <th class="table__column table__column_archive table__column_1">
@@ -81,7 +87,7 @@
 
             <div class="table-body-wrapper table-body-wrapper_archive my-simplebar-1 my-simplebar_archive"
               data-simplebar>
-              <table class="section__table table">
+              <table class="section__table table table_red">
                 <tbody class="table__body">
                   <tr class="table__row">
                     <td class="table__column table__column_archive table__column_1">

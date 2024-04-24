@@ -100,25 +100,33 @@
               </h2>
               <div class="calculating__fields">
                 <div class="calculating__fields-left">
-                  <div class="calculating__field calculating__field_w_250">
-                    <span class="calculating__field-title">
-                      Дата
-                    </span>
-                    <p class="calculating__field-text">
-                      22.01.2024
-                    </p>
+                  <div class="section__input input input_date input_date_w_250">
+                    <input class="input__datepicker" type="date" name="date" placeholder="Дата">
+                    <span class="input__placeholder">Дата</span>
+                    <img class="input__calendar" src="img/calendar.png">
                   </div>
-                  <div class="calculating__field calculating__field_w_250">
-                    <span class="calculating__field-title">
-                      Тип картона
+                  <div class="my-select my-select_w_250">
+                    <div class="my-select__wrapper">
+                      <span class="my-select__placeholder">
+                        Тип картона
+                      </span>
+                      <p class="my-select__text">
+                      </p>
+                    </div>
+                    <span class="my-select__arrow">
+                      <img src="img/arrow-down.svg" alt="arrow">
                     </span>
-                    <p class="calculating__field-text">
-                      Тип №1
-                    </p>
+                    <ul class="my-select__list my-simplebar-input" data-simplebar>
+                      <li class="my-select__item">Тип №1</li>
+                      <li class="my-select__item">Тип №2</li>
+                      <li class="my-select__item">Тип №3</li>
+                      <li class="my-select__item">Тип №4</li>
+                      <li class="my-select__item">Тип №5</li>
+                    </ul>
                   </div>
                 </div>
                 <div class="calculating__fields-right">
-                  
+
                   <div class="my-select my-select_w_350">
                     <div class="my-select__wrapper">
                       <span class="my-select__placeholder">
@@ -130,17 +138,17 @@
                     <span class="my-select__arrow">
                       <img src="img/arrow-down.svg" alt="arrow">
                     </span>
-                      <ul class="my-select__list my-simplebar-input" data-simplebar>
-                        <li class="my-select__item">ООО «Длинное большое название»</li>
-                        <li class="my-select__item">ООО «Длинное большое название»</li>
-                        <li class="my-select__item">ООО «Длинное большое название»</li>
-                        <li class="my-select__item">ООО «Длинное большое название»</li>
-                        <li class="my-select__item">ООО «Длинное большое название»</li>
-                        <li class="my-select__item">ООО «Длинное большое название»</li>
-                        <li class="my-select__item">ООО «Длинное большое название»</li>
-                        <li class="my-select__item">ООО «Длинное большое название»</li>
-                        <li class="my-select__item">ООО «Длинное большое название»</li>
-                      </ul>
+                    <ul class="my-select__list my-simplebar-input" data-simplebar>
+                      <li class="my-select__item">ООО «Длинное большое название»</li>
+                      <li class="my-select__item">ООО «Длинное большое название»</li>
+                      <li class="my-select__item">ООО «Длинное большое название»</li>
+                      <li class="my-select__item">ООО «Длинное большое название»</li>
+                      <li class="my-select__item">ООО «Длинное большое название»</li>
+                      <li class="my-select__item">ООО «Длинное большое название»</li>
+                      <li class="my-select__item">ООО «Длинное большое название»</li>
+                      <li class="my-select__item">ООО «Длинное большое название»</li>
+                      <li class="my-select__item">ООО «Длинное большое название»</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -296,7 +304,8 @@
               </div>
               <div class="btn-wrapper">
                 <button class="btn btn-reset popup__btn popup-close btn_disabled" href="#">Распечатать этикетки</button>
-                <a class="btn btn_red btn-reset popup__btn popup-approval" onclick='window.location.href="order-graphic.html"'>Графика заказа</a>
+                <a class="btn btn_red btn-reset popup__btn popup-approval"
+                  onclick='window.location.href="order-graphic.html"'>Графика заказа</a>
               </div>
             </div>
             <div class="wrap wrap_vertical calculating__availability">
@@ -1866,7 +1875,7 @@
     </style>
   </noscript>
 
-  <script> 
+  <script>
     //  горизонтальная прокрутка simplebar:
     let horizontalElements = document.querySelectorAll('.data-simplebar-h');
     for (let element of horizontalElements)
