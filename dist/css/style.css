@@ -202,7 +202,7 @@ img {
   border-radius: 7px;
   background: rgb(255, 255, 255);
   padding: 8px 12px;
-  transition: all 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 .my-select .my-select__arrow {
   width: 19px;
@@ -817,6 +817,7 @@ img {
   flex: none;
   border: 1px solid #d2d2d2;
   border-radius: 5px;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 .input__wrapper {
   display: flex;
@@ -1143,6 +1144,7 @@ img {
   border: 1px solid rgb(210, 210, 210);
   border-radius: 7px;
   background: rgb(255, 255, 255);
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 .input_search-field_w_250 {
   width: 250px;
@@ -1198,7 +1200,7 @@ img {
   justify-content: center;
   color: #222;
   border: 1px solid rgb(210, 210, 210);
-  transition: all 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 .input_date:hover {
   border: 1px solid rgb(140, 139, 139);

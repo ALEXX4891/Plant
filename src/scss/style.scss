@@ -221,7 +221,7 @@ img {
   border-radius: 7px;
   background: rgb(255, 255, 255);
   padding: 8px 12px;
-  transition: all 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
 
   .my-select__arrow {
     width: 19px;
@@ -907,6 +907,8 @@ img {
   flex: none;
   border: 1px solid $color-gray;
   border-radius: 5px;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+
   &__wrapper {
     display: flex;
     flex-flow: row nowrap;
@@ -951,18 +953,14 @@ img {
     line-height: 110%;
     border: none;
     border-radius: 5px;
-
-
   }
 
   .input_search_active {
-
     .input__placeholder {
       font-size: 10px;
       top: 9px;
       left: 44px;
     }
-    
   }
   &:hover {
     // outline: none;
@@ -977,7 +975,6 @@ img {
       // font-size: 10px;
     }
   }
-
 
   &_w_150 {
     width: 150px;
@@ -1316,6 +1313,8 @@ img {
   border: 1px solid rgb(210, 210, 210);
   border-radius: 7px;
   background: rgb(255, 255, 255);
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+
   // padding: 8px 12px;
 
   &_w_250 {
@@ -1346,18 +1345,17 @@ img {
     width: 100%;
     height: 100%;
     opacity: 0;
-  padding: 13px 12px 0;
-
+    padding: 13px 12px 0;
   }
 
   &_active {
     .input__placeholder {
-    position: absolute;
-    top: 9px;
-    left: 9px;
-    font-size: 10px;
-    line-height: 110%;
-    height: auto;
+      position: absolute;
+      top: 9px;
+      left: 9px;
+      font-size: 10px;
+      line-height: 110%;
+      height: auto;
     }
 
     .input__field-input {
@@ -1387,7 +1385,8 @@ img {
   justify-content: center;
   color: $color-black;
   border: 1px solid rgb(210, 210, 210);
-  transition: all 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+
 
   &:hover {
     border: 1px solid rgb(140, 139, 139);
